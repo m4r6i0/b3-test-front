@@ -1,0 +1,28 @@
+<div class="container">
+    <header>
+      <h1>Welcome to CDBCalculator!</h1>
+    </header>
+  
+    <section class="input-section">
+      <form (submit)="calculate()" class="form-container">
+        <div class="form-group">
+          <label for="amount">Initial Amount:</label>
+          <input type="number" id="amount" [(ngModel)]="initialAmount" name="amount" required>
+        </div>
+        <div class="form-group">
+          <label for="months">Months:</label>
+          <input type="number" id="months" [(ngModel)]="months" name="months" required>
+        </div>
+        <button type="submit" class="btn-calculate">Calculate</button>
+      </form>
+    </section>
+  
+    <section *ngIf="result" class="result-section">
+      <h2>Investment Result</h2>
+      <div class="result-group">
+        <p><strong>Gross Result:</strong> {{ result.grossResult | currency }}</p>
+        <p><strong>Net Result:</strong> {{ result.netResult | currency }}</p>
+      </div>
+    </section>
+  </div>
+  
