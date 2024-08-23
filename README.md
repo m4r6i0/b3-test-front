@@ -22,7 +22,7 @@ Para começar a utilizar esta aplicação, é necessário ter o `Node.js` instal
 
 Instalando o Angular CLI com npm:
 ```bash
-npm install 
+npm install ```
 
 
 ### Passo seguinte - Rode o seu projeto
